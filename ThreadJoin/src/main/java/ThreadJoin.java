@@ -26,7 +26,7 @@ public class ThreadJoin {
 
     };
 
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args) {
         Thread rio = new Thread(runnable);
         rio.setName("Rio");
 
@@ -37,18 +37,18 @@ public class ThreadJoin {
         mio.setName("Mio");
 
         // Without join method threads get terminated as soon as finishes their job
-       /* rio.start();
+        rio.start();
         tio.start();
-        mio.start();*/
+        mio.start();
 
         // Each thread will make sure previous thread is completes its job and terminated before it starts.
 
-        rio.start();
+       /* rio.start();
         rio.join();
         tio.start();
         tio.join();
         mio.start();
-        mio.join();
+        mio.join();*/
 
 
     }
